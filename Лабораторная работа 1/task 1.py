@@ -17,7 +17,7 @@ class Car:
         if not isinstance(model, str):
             raise TypeError("Модель машины должна быть строкой")
         if not isinstance(year,
-                          int) or year < 1885:  # В этом году появилась первая машина, следовательно раньше быть не может:
+                          int) or year < 1885:  # В этом году появилась первая машина
             raise TypeError("Год выпуска должен быть числом больше или равным 1885")
 
         self.model = model
@@ -69,6 +69,7 @@ if __name__ == "__main__":
     car.refuel(20)  # Заправляем 20 литров
     print("Новый уровень топлива: ", car.fuel_level)
     print(" ")
+
 
 class Smartphone:
     def __init__(self, model: str, battery_level: float, battery_capacity: float):
