@@ -16,8 +16,7 @@ class Car:
         """
         if not isinstance(model, str):
             raise TypeError("Модель машины должна быть строкой")
-        if not isinstance(year,
-                          int) or year < 1885:  # В этом году появилась первая машина
+        if not isinstance(year, int) or year < 1885:  # В этом году появилась первая машина
             raise TypeError("Год выпуска должен быть числом больше или равным 1885")
 
         self.model = model
@@ -36,7 +35,7 @@ class Car:
         if distance < 0:
             raise ValueError("Расстояние не может быть отрицательным")
 
-        fuel_needed = distance * 0.1  # предположим, что расход топлива 10 литров на 100 км
+        fuel_needed = distance * 0.1  # Предположим, что расход топлива 10 литров на 100 км
         if fuel_needed > self.fuel_level:
             raise ValueError("Недостаточно топлива для поездки")
 
@@ -124,16 +123,14 @@ class Smartphone:
 
 
 if __name__ == "__main__":
-    doctest.testmod()  # тестирование примеров, которые находятся в документации
+    doctest.testmod()
 
     # Пример работы класса
     phone = Smartphone("iPhone 12", 50, 100)
     print("Модель телефона: ", phone.model)
     print("Уровень зарядки", phone.battery_level)
     print("Емкость батареи", phone.battery_capacity)
-    # Использование смартфона в течение 2 часов
     print(phone.use(2))
-    # Зарядка на 30 процентов
     phone.charge(30)
     print("")
 
@@ -191,8 +188,6 @@ if __name__ == "__main__":
 
     lamp.adjust_brightness_by_time(20)  # Ночь, яркость должна быть 30
     print("Яркость лампы: ", lamp.brightness)  # 30
-
-    # Выключение лампы
     lamp.turn_off()
     print("Яркость", lamp.brightness)
     print("Цвет", lamp.color)
