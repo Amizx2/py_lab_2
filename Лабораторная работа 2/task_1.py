@@ -21,10 +21,10 @@ BOOKS_DATABASE = [
         "id": 2,
         "name": "test_name_2",
         "pages": 400,
-    }
+    },
 ]
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     list_books = [
         Book(id_=book_dict["id"], name=book_dict["name"], pages=book_dict["pages"]) for book_dict in BOOKS_DATABASE
     ]
