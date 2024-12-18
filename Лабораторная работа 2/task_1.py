@@ -24,7 +24,7 @@ BOOKS_DATABASE = [
     }
 ]
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     list_books = [
         Book(id_=book_dict["id"], name=book_dict["name"], pages=book_dict["pages"]) for book_dict in BOOKS_DATABASE
     ]
